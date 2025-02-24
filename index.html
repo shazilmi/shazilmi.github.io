@@ -1,8 +1,22 @@
 <html>
 	<head>
 		<title>Shazil M I Portfolio</title>
+		<meta charset="utf-8">
 	</head>
 	<body>
+		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+		<div id = "app">{{ message }}</div>
 		This page is either under construction, or I forgot to push my code to GitHub. Thank you for your interest.
+		<script>
+			const { createApp, ref} = Vue;
+			createApp({
+				setup() {
+					const message = ref('Hello vue!');
+					return {
+						message
+					}
+				}
+			}).mount('#app')
+		</script>
 	</body>
 </html>
