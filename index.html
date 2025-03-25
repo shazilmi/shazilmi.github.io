@@ -11,9 +11,11 @@
 				}
 			}
 		</script>
-		<div id = "app">{{ message }}</div>
+		<div id = "app">
+			{{ message }}
+			<MyComponent />
+		</div>
 		This page is either under construction, or I forgot to push my code to GitHub. Thank you for your interest.
-		<MyComponent />
 		<script type="module">
 			import { createApp } from 'vue';
 			import MyComponent from 'my-component.js';
