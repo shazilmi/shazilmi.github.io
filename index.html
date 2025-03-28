@@ -14,9 +14,11 @@
 		<div id = "app"></div>
 		This page is either under construction, or I forgot to push my code to GitHub. Thank you for your interest.
 		<script type="module">
-			import { createApp } from 'vue';
+			import { createApp, h } from 'vue';
 			import MyComponent from '/my-component.js';
-			createApp({MyComponent}).mount('#app')
+			createApp({
+				render: ()=> h(MyComponent)
+			}).mount('#app')
 		</script>
 	</body>
 </html>
