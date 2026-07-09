@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Shazil M I Portfolio</title>
@@ -13,18 +14,29 @@
 			}
 		</script>
 		<div id = "app">
-			<RouterView />
+			<!-- <RouterView /> -->
+			 {{ message }}
 		</div>
 		This page is either under construction, or I forgot to push my code to GitHub. Thank you for your interest.
 		<script type="module">
-			import { createApp, h } from 'vue';
-			import MyComponent from '/my-component.js';
-			import router from "/router.js";
-			const app = createApp({
-				render: ()=> h(MyComponent)
-			})
-			app.mount("#app")
-			app.use("router")
+			// import { createApp, h } from 'vue';
+			// import MyComponent from '/my-component.js';
+			// import router from "/router.js";
+			// const app = createApp({
+			// 	render: ()=> h(MyComponent)
+			// })
+			// app.mount("#app")
+			// app.use("router")
+			import { createApp, ref } from 'vue';
+
+			createApp({
+				setup() {
+					const message = ref("Hello Vue!")
+					return {
+						message
+					}
+				}
+			}).mount('#app')
 		</script>
 	</body>
 </html>
