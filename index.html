@@ -3,9 +3,10 @@
 	<head>
 		<title>Shazil M I Portfolio</title>
 		<meta charset="utf-8">
+        <meta name="viewport" content="width-device-width,initial-scale=1.0">
 	</head>
 	<body>
-		<script type = "importmap">
+		<!-- <script type = "importmap">
 			{
 				"imports" : {
 					"vue" : "https://unpkg.com/vue@3/dist/vue.esm-browser.js",
@@ -14,19 +15,19 @@
 			}
 		</script>
 		<div id = "app">
-			<!-- <RouterView /> -->
+			<RouterView />
 			 {{ message }}
 		</div>
 		This page is either under construction, or I forgot to push my code to GitHub. Thank you for your interest.
 		<script type="module">
-			// import { createApp, h } from 'vue';
-			// import MyComponent from '/my-component.js';
-			// import router from "/router.js";
-			// const app = createApp({
-			// 	render: ()=> h(MyComponent)
-			// })
-			// app.mount("#app")
-			// app.use("router")
+			import { createApp, h } from 'vue';
+			import MyComponent from '/my-component.js';
+			import router from "/router.js";
+			const app = createApp({
+				render: ()=> h(MyComponent)
+			})
+			app.mount("#app")
+			app.use("router")
 			import { createApp, ref } from 'vue';
 
 			createApp({
@@ -36,7 +37,37 @@
 						message
 					}
 				}
-			}).mount('#app')
-		</script>
+			}).mount('#app') -->
+		<!-- </script> -->
+		<div id="app">
+            
+            <nav>
+                <router-link to="/">Home</router-link>
+                <router-link to="/about">About</router-link>
+            </nav>
+
+            <div class="page">
+                <router-view></router-view>
+            </div>
+
+        </div>
+
+		<!--<script type="module">
+		import { createApp } from 'vue'
+		import MyComponent from './my-component.js'
+
+		createApp(MyComponent).mount('#app')
+        </script>-->
+
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+        <script src="https://unpkg.com/vue-router@4/dist/vue-router.global.js"></script>
+
+        <script src="./home.js"</script>
+        <script src="./about.js"</script>
+        
+        <script src="./app.js"></script>
+
+
 	</body>
 </html>
